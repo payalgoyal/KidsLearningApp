@@ -16,7 +16,7 @@ function registerEnteredKey(key){
 		// var queryArea = document.getElementById("play_area");
 		// queryArea.setAttribute("style","width:0%")
 		var corr = document.createElement("img");
-		corr.setAttribute("src","images/correct.png");
+		corr.setAttribute("src","images/correct.jpg");
 		corr.setAttribute("id","correctState");
 		
 		var gameArea = document.getElementById("game_area");
@@ -57,7 +57,7 @@ var compareAns=function(queryLetter,enteredKey) {
 		// var queryArea = document.getElementById("play_area");
 		// queryArea.setAttribute("style","width:0%")
 		var corr = document.createElement("img");
-		corr.setAttribute("src","images/correct.png");
+		corr.setAttribute("src","images/correct.jpg");
 		corr.setAttribute("id","correctState");
 		
 		var gameArea = document.getElementById("game_area");
@@ -75,7 +75,7 @@ var compareAns=function(queryLetter,enteredKey) {
 	else{
 		playAudio("wrongLetter");
 		var corr = document.createElement("img");
-		corr.setAttribute("src","images/incorrect.png");
+		corr.setAttribute("src","images/incorrect.jpg");
 		corr.setAttribute("id","correctState");
 		
 		var gameArea = document.getElementById("game_area");

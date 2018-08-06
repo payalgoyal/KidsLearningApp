@@ -17,9 +17,12 @@ function guessIt(){
 	
 	queryLetter = list[ran].key;
 	
+	var querySpan = document.createElement("span");
+	querySpan.setAttribute("style","font-size:2em;");
+	querySpan.innerHTML = queryLetter;
+	
 	var queryArea = document.getElementById("play_area");
-	queryArea.setAttribute("style","font-size:2em");
-	queryArea.innerHTML = queryLetter;
+	queryArea.appendChild(querySpan);
 	
 	optionKeys = list[ran].optionValue;
 	

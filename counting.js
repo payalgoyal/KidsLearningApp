@@ -24,7 +24,7 @@ function counting(){
 	
 	var queryDiv = document.createElement("div");
 	queryDiv.setAttribute("id","queryDiv");
-	queryDiv.setAttribute("style","width:70%;height:100%;background-color:red;float:left");
+	queryDiv.setAttribute("style","width:70%;float:left");
 	playArea.appendChild(queryDiv);
 	for (var i=0;i<list[ran].key;i++){
 		var query = document.createElement("img");
@@ -37,7 +37,7 @@ function counting(){
 	
 	var ansDiv = document.createElement("div");
 	ansDiv.setAttribute("id","ansDiv");
-	ansDiv.setAttribute("style","width:30%;height:100%;background-color:green;float:right");
+	ansDiv.setAttribute("style","width:30%;float:right");
 	playArea.appendChild(ansDiv);
 	
 	var ansPara = document.createElement("p");

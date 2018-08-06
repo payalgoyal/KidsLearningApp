@@ -13,20 +13,24 @@ function registerEnteredKey(key){
 			keysEle[keyEle].disabled = true;
 		}
 		playAudio("correctLetter");
+		
+		var collectedChoco = document.getElementById('collectedChocolates');
+		document.getElementById('collectedChocolates').innerHTML = parseInt(collectedChoco.innerHTML) + 1;
+		
 		// var queryArea = document.getElementById("play_area");
 		// queryArea.setAttribute("style","width:0%")
 		var corr = document.createElement("img");
-		corr.setAttribute("src","images/correct.jpg");
+		corr.setAttribute("src","images/correct.png");
 		corr.setAttribute("id","correctState");
 		
-		var gameArea = document.getElementById("game_area");
+		var gameArea = document.getElementById("ansImage");
 		gameArea.appendChild(corr);
 		
 		setTimeout(function(){
 			var ansPara = document.getElementById("ansPara");
 			ansPara.innerHTML = "";
 			var cS = document.getElementById("correctState");
-			var gA = document.getElementById("game_area");
+			var gA = document.getElementById("ansImage");
 			gA.removeChild(cS);
 			correctAns();
 		}, 1000);
@@ -56,17 +60,21 @@ var compareAns=function(queryLetter,enteredKey) {
 		playAudio("correctLetter");
 		// var queryArea = document.getElementById("play_area");
 		// queryArea.setAttribute("style","width:0%")
+		
+		var collectedChoco = document.getElementById('collectedChocolates');
+		document.getElementById('collectedChocolates').innerHTML = parseInt(collectedChoco.innerHTML) + 1;
+		
 		var corr = document.createElement("img");
-		corr.setAttribute("src","images/correct.jpg");
+		corr.setAttribute("src","images/correct.png");
 		corr.setAttribute("id","correctState");
 		
-		var gameArea = document.getElementById("game_area");
+		var gameArea = document.getElementById("ansImage");
 		gameArea.appendChild(corr);
 		setTimeout(function(){
 			var ansPara = document.getElementById("ansPara");
 			ansPara.innerHTML = "";
 			var cS = document.getElementById("correctState");
-			var gA = document.getElementById("game_area");
+			var gA = document.getElementById("ansImage");
 			gA.removeChild(cS);
 			correctAns();
 		}, 1000);
@@ -75,16 +83,16 @@ var compareAns=function(queryLetter,enteredKey) {
 	else{
 		playAudio("wrongLetter");
 		var corr = document.createElement("img");
-		corr.setAttribute("src","images/incorrect.jpg");
+		corr.setAttribute("src","images/incorrect.png");
 		corr.setAttribute("id","correctState");
 		
-		var gameArea = document.getElementById("game_area");
+		var gameArea = document.getElementById("ansImage");
 		gameArea.appendChild(corr);
 		setTimeout(function(){
 			var ansPara = document.getElementById("ansPara");
 			ansPara.innerHTML = "";
 			var cS = document.getElementById("correctState");
-			var gA = document.getElementById("game_area");
+			var gA = document.getElementById("ansImage");
 			gA.removeChild(cS);
 		}, 1000);
 	}	

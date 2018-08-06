@@ -22,6 +22,7 @@ function guessIt(){
 	querySpan.innerHTML = queryLetter;
 	
 	var queryArea = document.getElementById("play_area");
+	document.getElementById("play_area").innerHTML = '';
 	queryArea.appendChild(querySpan);
 	
 	optionKeys = list[ran].optionValue;
